@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @Date 2022/12/14 21:37
  */
 
-public class ArrayQueueDemo {
+public class CircleArrayQueueDemo {
     public static void main(String[] args) {
         //创建一个队列
         ArrayQueue arrayQueue = new ArrayQueue(3);
@@ -59,17 +59,17 @@ public class ArrayQueueDemo {
     }
 }
 
-class ArrayQueue {
+class CircleArrayQueue {
     private int maxSize;//数组的最大容量
     private int front;//队列头
     private int rear;//队列尾
     private int[] arr;//用于存放数据,模拟队列
 
-    public ArrayQueue(int maxSize) {
+    public CircleArrayQueue(int maxSize) {
         this.maxSize = maxSize;
         arr = new int[maxSize];
-        front = -1;//指向队列头的前一个位置
-        rear = -1;//指向队列尾部
+        front = 0;//指向队列头位置
+        rear = 0;//指向队列尾部的后一个位置
     }
 
     //判断队列是否满
